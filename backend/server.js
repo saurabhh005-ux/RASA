@@ -24,6 +24,11 @@ app.use('/api/projects', projectRoutes);
 app.use('/api/appointments', appointmentRoutes);
 app.use('/api/content', contentRoutes);
 
+// Root route to check if server is running
+app.get('/', (req, res) => {
+  res.send('RASA Backend API is running successfully! 🚀');
+});
+
 // Use MongoDB connection
 async function startServer() {
   try {
