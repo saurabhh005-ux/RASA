@@ -15,7 +15,7 @@ const ProjectDetail = () => {
       try {
         const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects/${id}`);
         if (!response.ok) {
-          throw new Error('Project not found');
+          throw new Error(`Project not found');
         }
         const data = await response.json();
         setProject(data);

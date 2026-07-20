@@ -12,7 +12,7 @@ const HeroSlider = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects');
+        const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects`);
         const data = await response.json();
         setProjects(data.slice(0, 5));
         setLoading(false);

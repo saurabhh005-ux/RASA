@@ -11,7 +11,7 @@ const AdminAppointments = () => {
   const fetchAppointments = async () => {
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/appointments', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/appointments`, {
         headers: { 'Authorization': `Bearer ${token}` }
       });
       const data = await response.json();
