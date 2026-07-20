@@ -1,0 +1,29 @@
+:root {
+  /* Colors - Ultra Luxury Light Palette */
+  --color-primary: #fdfdfc; /* Warm, bright off-white */
+  --color-secondary: #f4f3f0; /* Slightly darker cream for surfaces */
+  --color-accent: #b08d57; /* Deep, elegant gold/brass */
+  --color-accent-hover: #907246; /* Darker gold for hover states */
+  --color-text-light: #1a1a1a; /* Deep charcoal for readability (acts as "light" mapping) */
+  --color-text-muted: #666666; /* Editorial taupe grey */
+  --color-background: #ffffff; /* Pure white or very warm white */
+  --color-surface: #faf9f6; /* Off-white surface */
+  --color-border: rgba(176, 141, 87, 0.2); /* Subtle gold border */
+
+  /* Typography */
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Spacing - Increased for more whitespace */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1.5rem;
+  --spacing-md: 3rem;
+  --spacing-lg: 6rem;
+  --spacing-xl: 10rem;
+
+  /* Transitions - Slower, cinematic easing */
+  --transition-fast: 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --transition-normal: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 1.2s cubic-bezier(0.19, 1, 0.22, 1);
+  --transition-ultra-slow: 2s cubic-bezier(0.19, 1, 0.22, 1);
+}

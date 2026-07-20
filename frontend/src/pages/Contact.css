@@ -1,0 +1,126 @@
+.contact-page {
+  padding: 120px 0 0;
+  min-height: 100vh;
+}
+
+.contact-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 5% 6rem;
+}
+
+@media (min-width: 1024px) {
+  .contact-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+    gap: 6rem;
+  }
+}
+
+.contact-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-header {
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.contact-header h1, .contact-header h2 {
+  font-size: 3.5rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.contact-header p {
+  color: var(--color-text-muted);
+  font-size: 1.1rem;
+}
+
+.contact-info-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.info-card {
+  text-align: left;
+  padding: 2.5rem;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  transition: transform var(--transition-normal);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.info-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.3);
+}
+
+.info-icon {
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+}
+
+.info-card h3 {
+  color: var(--color-text-light);
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.info-card p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .contact-header h1 {
+    font-size: 2.5rem;
+  }
+}
+
+.social-actions {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5), inset 0 2px 5px rgba(255, 255, 255, 0.1);
+  background: linear-gradient(135deg, #2a2a2a 0%, #111 100%);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+.social-btn svg {
+  width: 28px;
+  height: 28px;
+  z-index: 2;
+  transition: transform 0.3s ease;
+  fill: var(--color-accent);
+}
+
+.social-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(212, 175, 55, 0.3), inset 0 2px 5px rgba(255, 255, 255, 0.1);
+  border-color: var(--color-accent);
+}
+
+.social-btn:hover svg {
+  transform: scale(1.1);
+}
