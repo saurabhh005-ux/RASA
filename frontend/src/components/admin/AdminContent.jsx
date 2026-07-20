@@ -40,7 +40,7 @@ const AdminContent = () => {
 
   const fetchContent = async () => {
     try {
-      const response = await fetch('/api/content');
+      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/content');
       const data = await response.json();
       if (data) {
         setContent(data);
@@ -102,7 +102,7 @@ const AdminContent = () => {
 
     try {
       const token = localStorage.getItem('adminToken');
-      const response = await fetch('/api/content', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/content', {
         method: 'PUT',
         headers: {
           'Authorization': `Bearer ${token}`

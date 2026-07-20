@@ -22,7 +22,7 @@ const AdminProjects = () => {
 
   const fetchProjects = async () => {
     try {
-      const response = await fetch('/api/projects');
+      const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects');
       const data = await response.json();
       setProjects(data);
     } catch (error) {
@@ -34,7 +34,7 @@ const AdminProjects = () => {
     if (window.confirm('Are you sure you want to delete this project?')) {
       try {
         const token = localStorage.getItem('adminToken');
-        await fetch(`/api/projects/${id}`, { 
+        await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects/${id}`, { 
           method: 'DELETE',
           headers: { 'Authorization': `Bearer ${token}` }
         });
@@ -159,13 +159,13 @@ const AdminProjects = () => {
       let response;
 
       if (editingId) {
-        response = await fetch(`/api/projects/${editingId}`, {
+        response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects/${editingId}`, {
           method: 'PUT',
           headers,
           body: payload
         });
       } else {
-        response = await fetch('/api/projects', {
+        response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/projects', {
           method: 'POST',
           headers,
           body: payload

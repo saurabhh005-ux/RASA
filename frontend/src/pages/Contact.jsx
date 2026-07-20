@@ -9,7 +9,7 @@ const Contact = () => {
   useEffect(() => {
     const fetchContent = async () => {
       try {
-        const response = await fetch('/api/content');
+        const response = await fetch(`${import.meta.env.VITE_API_URL || ''}/api/content');
         const data = await response.json();
         setContent(data);
       } catch (error) {
