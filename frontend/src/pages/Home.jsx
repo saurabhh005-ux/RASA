@@ -47,7 +47,18 @@ const Home = () => {
   }, [content]);
 
   if (!content) {
-    return <div className="home-page" style={{minHeight: '100vh', backgroundColor: 'var(--color-background)'}}></div>;
+    return (
+      <div className="home-page" style={{minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', backgroundColor: 'var(--color-background)', color: 'var(--color-text)'}}>
+        <div style={{width: '40px', height: '40px', border: '3px solid rgba(255,255,255,0.1)', borderTop: '3px solid var(--color-accent)', borderRadius: '50%', animation: 'spin 1s linear infinite', marginBottom: '1rem'}}></div>
+        <p style={{fontSize: '1.2rem', fontWeight: '500'}}>Connecting to server...</p>
+        <p style={{fontSize: '0.9rem', color: 'var(--color-text-muted)', maxWidth: '300px', textAlign: 'center', marginTop: '0.5rem'}}>Please wait up to 50 seconds if the free database is waking up.</p>
+        <style>
+          {`
+            @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+          `}
+        </style>
+      </div>
+    );
   }
 
   return (
